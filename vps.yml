@@ -1,0 +1,14 @@
+name: VPS-like Setup
+
+on: [workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup
+        run: |
+          sudo apt update
+          sudo apt install -y neofetch htop
+          neofetch
+          htop

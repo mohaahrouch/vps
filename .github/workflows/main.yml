@@ -1,14 +1,13 @@
-name: VPS-like Setup
+name: VPS Test
 
 on: [workflow_dispatch]
 
 jobs:
-  build:
+  run-vps:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup
+      - name: Setup tools
         run: |
           sudo apt update
-          sudo apt install -y neofetch htop
+          sudo apt install -y neofetch
           neofetch
-          htop
